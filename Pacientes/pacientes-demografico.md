@@ -1,4 +1,4 @@
-# Consulta: Datos demográficos y anonimizados de los pacientes
+# Consulta: datos demográficos y anonimizados de los pacientes
 
 ## 📋 Descripción
 Esta consulta extrae los datos anonimizados de los pacientes regisrados en la base de datos de la clínica dental. Además de las columnas propias de la base de datos, también se han calculado varias columnas más en base a las columnas anteriores. Ideal para análisis demográficos básicos o preparación de reportes.
