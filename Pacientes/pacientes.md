@@ -1,1 +1,0 @@
-## Queries sobre pacientes
