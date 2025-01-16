@@ -24,7 +24,7 @@ El repositorio está organizado en diferentes carpetas y archivos según las cat
 
 1. **Clonar el repositorio**:  
    ```bash
-   git clone https://github.com/tu-usuario/queries-gesden.git
+   git clone https://github.com/clinicapradillo/gesden-queries.git
 
 2. Acceso a las consultas: Navega por las carpetas y selecciona las consultas que se ajusten a tus necesidades.
 
