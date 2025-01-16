@@ -1,4 +1,4 @@
-# Queries para la Base de Datos de GESDEN
+# Consultas SQL para la Base de Datos de GESDEN
 
 Este repositorio contiene una colección de consultas SQL diseñadas para facilitar la gestión y explotación de datos de la base de datos del software **GESDEN**. Estas consultas están optimizadas para cubrir diferentes necesidades relacionadas con la administración de clínicas dentales, tales como la generación de informes, análisis de datos y soporte a la toma de decisiones.
 
