@@ -36,7 +36,7 @@ El repositorio está organizado en diferentes carpetas y archivos según las cat
 
 ## 🛠️ Requisitos
 
-Base de datos GESDEN configurada y accesible.
+Base de datos **GESDEN** configurada y accesible.
 
 Cliente SQL compatible (recomendado: Microsoft SQL Server Management Studio).
 
