@@ -42,13 +42,19 @@ SELECT
     DCitas.IdCita,
     DCitas.IdIcono,
     IconoTratAgenda.Descripcion AS IconoDescripcion,
-    TSitCita.Descripcio AS SitCitaDescripcion
+    TSitCita.Descripcio AS SitCitaDescripcion,
+	Pacientes.Sexo AS Sexo,
+    Pacientes.CP AS CP,
+    Pacientes.IdProfesio AS IdProfesio,
+    Pacientes.IdEcivil AS IdEcivil,
+    Pacientes.NumHijos AS NumHijos
 FROM 
     DCitas
 LEFT JOIN 
     IconoTratAgenda ON DCitas.IdIcono = IconoTratAgenda.IdIcono
 LEFT JOIN 
     TSitCita ON DCitas.IdSitC = TSitCita.IdSitC
--- Agregar la tabla Pacientes para obtener FecNacim
 LEFT JOIN 
-    Pacientes ON DCitas.IdPac = Pacientes.IdPac;
+    Pacientes ON DCitas.IdPac = Pacientes.IdPac
+WHERE 
+    DCitas.IdPac IS NOT NULL;
