@@ -1,7 +1,12 @@
 SELECT 
     DCitas.IdUsu,
     DCitas.IdOrden,
-    DCitas.Fecha,
+    -- Convertir la "fecha serial" Excel (INT) a un formato DD-MM-YYYY
+    CONVERT(
+        VARCHAR(10),
+        DATEADD(DAY, DCitas.Fecha, '30-12-1899'),
+        23
+    ) AS Fecha,
     -- Convertir la columna Hora de segundos a formato HH:mm:ss
     CONVERT(TIME, DATEADD(SECOND, DCitas.Hora, '00:00:00')) AS Hora,
     -- Convertir la Duración de segundos a minutos
