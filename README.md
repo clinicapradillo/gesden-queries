@@ -15,9 +15,9 @@ El objetivo principal de este repositorio es:
 El repositorio está organizado en diferentes carpetas y archivos según las categorías de las consultas:
 
 - **Pacientes**: consultas relacionadas con la información de pacientes (listados, análisis de visitas, historial, etc.).
-- **Tratamientos**:  consultas relacionadas con los tratamientos médicos de los pacientes.
-- **Presupuestos**: consultas relacionadas con los presupuestos entregados a pacientes (presupuestos dormidos, análisis demográfico de presupuestos, etc.).
 - **Citas**: consultas para la gestión de citas (pendientes, completadas, canceladas, etc.).
+- **Presupuestos**: consultas relacionadas con los presupuestos entregados a pacientes (presupuestos dormidos, análisis demográfico de presupuestos, etc.).
+- **Tratamientos**:  consultas relacionadas con los tratamientos médicos de los pacientes.
 - **Facturación**: consultas para analizar facturación, pagos pendientes, etc.
 - **Informes**: consultas para generar informes personalizados.
 - **Administración**: consultas para apoyar la administración de la clínica.
