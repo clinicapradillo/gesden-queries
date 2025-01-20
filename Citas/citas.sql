@@ -7,6 +7,23 @@ SELECT
         DATEADD(DAY, DCitas.Fecha, '30-12-1899'),
         23
     ) AS Fecha,
+	-- Seleccionar directamente la columna FecNacim desde la tabla Pacientes
+    Pacientes.FecNacim AS FecNacim,
+	-- Columna calculada EdadCita
+    CASE 
+        WHEN Pacientes.FecNacim IS NULL OR DCitas.Fecha IS NULL THEN NULL
+        ELSE 
+            DATEDIFF(YEAR, Pacientes.FecNacim, DATEADD(DAY, DCitas.Fecha, '30-12-1899'))
+            - CASE
+                -- Si el paciente no ha cumplido años todavía en la fecha de la cita, restar 1
+                WHEN MONTH(DATEADD(DAY, DCitas.Fecha, '30-12-1899')) < MONTH(Pacientes.FecNacim)
+                     OR (
+                         MONTH(DATEADD(DAY, DCitas.Fecha, '30-12-1899')) = MONTH(Pacientes.FecNacim)
+                         AND DAY(DATEADD(DAY, DCitas.Fecha, '30-12-1899')) < DAY(Pacientes.FecNacim)
+                     )
+                THEN 1 ELSE 0
+              END
+    END AS EdadCita,
     -- Convertir la columna Hora de segundos a formato HH:mm:ss
     CONVERT(TIME, DATEADD(SECOND, DCitas.Hora, '00:00:00')) AS Hora,
     -- Convertir la Duración de segundos a minutos
@@ -31,4 +48,7 @@ FROM
 LEFT JOIN 
     IconoTratAgenda ON DCitas.IdIcono = IconoTratAgenda.IdIcono
 LEFT JOIN 
-    TSitCita ON DCitas.IdSitC = TSitCita.IdSitC;
+    TSitCita ON DCitas.IdSitC = TSitCita.IdSitC
+-- Agregar la tabla Pacientes para obtener FecNacim
+LEFT JOIN 
+    Pacientes ON DCitas.IdPac = Pacientes.IdPac;
