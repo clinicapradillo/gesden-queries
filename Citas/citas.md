@@ -1,4 +1,4 @@
-# Datos demográficos y citas de los pacientes
+# Citas de pacientes
 
 ## 📋 Descripción
 Esta consulta extrae información anonimizada de las citas y datos de los pacientes registrados en la base de datos de la clínica dental. Además de las columnas propias de la base de datos, también se han calculado varias columnas adicionales, como la edad del paciente en la fecha de la cita (**EdadCita**). Ideal para análisis demográficos, planeación de horarios o preparación de reportes detallados.
