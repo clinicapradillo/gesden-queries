@@ -8,12 +8,15 @@ SELECT
     DCitas.Duracion / 60 AS DuracionMinutos,
     DCitas.IdSitC,
     DCitas.IdPac,
+	DCitas.Aceptada,
+	DCitas.HorSitCita,
     -- Convertir la columna HorLlegada de segundos a formato HH:mm:ss
     CONVERT(TIME, DATEADD(SECOND, DCitas.HorLlegada, '00:00:00')) AS HorLlegada,
     -- Convertir la HorConsul de segundos a formato HH:mm:ss
     CONVERT(TIME, DATEADD(SECOND, DCitas.HorConsul, '00:00:00')) AS HorConsul,
     -- Convertir la HorFinal de segundos a formato HH:mm:ss
     CONVERT(TIME, DATEADD(SECOND, DCitas.HorFinal, '00:00:00')) AS HorFinal,
+	
     DCitas.IdCita,
     DCitas.IdIcono,
     IconoTratAgenda.Descripcion AS IconoDescripcion,
